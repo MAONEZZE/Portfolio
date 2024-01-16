@@ -1,0 +1,101 @@
+$cor1: #1b2211;
+$cor2: #233706;
+$cor3: #303030;
+
+label{
+  color: #3a5315;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.sidenav-container {
+  height: 100%;
+  background-color: transparent;
+  // background: radial-gradient(circle, rgb(58, 70, 59) 0%, $cor1 100%);
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+//~ -> pega o elemento irmão
+//> -> pega o elemento filho
+//.input-switch:checked ~ .slider > .circulo -> quando o input for checkado pega o filho do elemnto irmão do input
+
+// .input-switch:checked ~ .slider {
+//   background: $cor2;
+// }
+
+// .input-switch:checked ~ .slider > .circulo{
+//   background: #727272;
+// }
+
+.input-switch{
+  display: none;
+}
+
+.input-switch:checked {
+  ~ .slider {
+    background: $cor2;
+
+    > .circulo{
+      background: #5a5a5a;
+
+      left: 21px;
+    }
+  }
+}
+
+.jcb{
+  display: flex;
+  justify-content: space-between;
+}
+
+.circulo{
+  background: $cor3;
+  
+  width: 23px;
+  height: 23px;
+  
+  border: none;
+  border-radius: 100px;
+
+  pointer-events: none;
+
+  left: 2px;
+  top: 2px;
+
+  position: absolute;
+
+  transition: all 300ms ease-in-out;
+}
+
+.slider{
+  position: relative;//informa para o navegador que todo filho desse elemento vai ter uma posição relativo a ele
+  background-color: $cor1;
+
+  width: 50px;
+  height: 31px;
+
+  border: 2px solid $cor3;
+  border-radius: 100px;
+
+  transition: all 300ms ease-in-out;
+}
+
+.espacamento-lateral{
+  padding-left: 3%;
+  padding-right: 8%;
+
+  border-bottom: $cor3 4px solid;
+}

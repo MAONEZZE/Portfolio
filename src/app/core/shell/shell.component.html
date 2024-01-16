@@ -1,0 +1,37 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav-content>
+    <mat-toolbar class="bg-black jcb espacamento-lateral">
+      <button 
+        appCardHover
+        mat-raised-button
+        style="border-radius: 100px;"
+        color="accent"
+        routerLink>
+        <mat-icon class="me-2">notes</mat-icon>
+        Curriculo
+      </button>
+
+      <section class="jcb gap-2">
+        <label class="mt-1" for="switch">PT</label>
+
+        <div>
+          <label class="jcb">
+
+            <input class="input-switch" type="checkbox" id="switch">
+            <div class="slider">
+              <button class="circulo"></button>
+            </div>
+
+          </label>
+        </div>
+
+        <label class="mt-1" for="switch">EN</label>
+      </section>
+      
+    </mat-toolbar>
+    
+    <main>
+      <ng-content ></ng-content>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>

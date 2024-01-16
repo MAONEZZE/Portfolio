@@ -1,25 +1,37 @@
-
-// Custom Theming for Angular Material
-// For more information: https://material.angular.io/guide/theming
 @use '@angular/material' as mat;
-// Plus imports for other components in your app.
-
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-// Be sure that you only ever include this mixin once!
 @include mat.core();
 
-// Define the palettes for your theme using the Material Design palettes available in palette.scss
-// (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// hue. Available color palettes: https://material.io/design/color/
-$Portfolio-primary: mat.define-palette(mat.$indigo-palette);
-$Portfolio-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+@import 'bootstrap/scss/bootstrap';
 
-// The warn palette is optional (defaults to red).
-$Portfolio-warn: mat.define-palette(mat.$red-palette);
+$portfolio-palette: (
+  50: #F1F8E9,
+  100: #DCEDC8,
+  200: #C5E1A5,
+  300: #AED581,
+  400: #9CCC65,
+  500: #8BC34A,
+  600: #7CB342,
+  700: #233706,
+  800: #363636,
+  900: #1b2211,
+ contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: white,
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+ )
+);
 
-// Create the theme object. A theme consists of configurations for individual
-// theming systems such as "color" or "typography".
+$Portfolio-primary: mat.define-palette($portfolio-palette, 900);
+$Portfolio-accent: mat.define-palette($portfolio-palette, 700);
+$Portfolio-warn: mat.define-palette($portfolio-palette, 800);
+
 $Portfolio-theme: mat.define-light-theme((
   color: (
     primary: $Portfolio-primary,
@@ -28,15 +40,16 @@ $Portfolio-theme: mat.define-light-theme((
   )
 ));
 
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
 @include mat.all-component-themes($Portfolio-theme);
 
-/* You can add global styles to this file, and also import other style files */
+html, body { 
+  height: 100%;
+}
 
-/* Importing Bootstrap SCSS file. */
-@import 'bootstrap/scss/bootstrap';
+body { 
+  margin: 0; 
+  font-family: Roboto, "Helvetica Neue", sans-serif; 
+  background-color: black;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+

@@ -1,0 +1,32 @@
+$cor1: #1b2211;
+$cor2: #233706;
+$cor3: #303030;
+
+.img-edit{
+  width: 370px;
+  height: 370px;
+}
+
+.intro{
+  display: grid;
+  justify-content: center;
+}
+
+.nome{
+  font-size: 90px;
+  font-family: 'Rubik Mono One', monospace;
+}
+
+.centro{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.moldura{
+  width: 390px;
+  height: 390px;
+
+  background: $cor3;
+  border-radius: 100%;
+}
