@@ -13,6 +13,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { SharedModule } from './shared/shared.module';
 
 const locale = 'pt-BR'
 
@@ -31,8 +32,9 @@ registerLocaleData(localePt, locale)
     MatToolbarModule,
     MatButtonModule,
     MatSidenavModule,
-    MatIconModule,
-    MatListModule
+    MatListModule,
+    SharedModule
+    
   ],
   providers: [
     {
