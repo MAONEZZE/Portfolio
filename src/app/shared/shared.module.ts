@@ -5,11 +5,13 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { RouterModule } from '@angular/router';
 import { CardHoverDirective } from './directives/card-hover.directive';
+import { CarrosselComponent } from './carrossel/carrossel.component';
+import { CardComponent } from './card/card.component';
 
 
 
 @NgModule({
-  declarations: [CardHoverDirective,],
+  declarations: [CardHoverDirective, CarrosselComponent, CardComponent,],
   imports: [
     CommonModule,
     RouterModule,
