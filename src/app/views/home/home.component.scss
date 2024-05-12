@@ -18,6 +18,11 @@ $cor3: #303030;
   }
 
   background: $cor3;
+  background: radial-gradient(
+    circle,
+    #b6b6b6 5%,
+    black 75%
+  );
   border-radius: 100%;
 
   //sombra
@@ -61,8 +66,8 @@ p{
 }
 
 .fundo2{
-  background-color: white;
-  background: linear-gradient(45deg, rgb(255, 177, 177), white, rgb(241, 193, 103))
+  background: rgb(255, 255, 255);
+  background: linear-gradient(16deg, rgba(232,0,0,0.4822303921568627) 0%, rgba(255,255,255,1) 52%, rgba(255,98,0,0.48783263305322133) 100%);
 }
 
 // *{
@@ -75,6 +80,7 @@ p{
 
 .icone{
   font-size: 90px;
+  color: #ebebeb;
 
   &:hover{
     filter: drop-shadow(0px 0px 70px rgb(95, 105, 91));

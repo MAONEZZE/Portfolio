@@ -3,8 +3,6 @@
 
 @import url("bootstrap-icons/font/bootstrap-icons.min.css");
 
-@import 'bootstrap/scss/bootstrap';
-
 $portfolio-palette: (
   50: #F1F8E9,
   100: #DCEDC8,
@@ -44,15 +42,9 @@ $Portfolio-theme: mat.define-light-theme((
 
 @include mat.all-component-themes($Portfolio-theme);
 
-html, body { 
-  height: 100%;
-}
-
-body { 
-  margin: 0; 
-  font-family: Roboto, "Helvetica Neue", sans-serif; 
-  background-color: black;
-}
+html, body { height: 100%; }
+body { margin: 0; font-family: "Kanit", sans-serif, sans-serif; }
 
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
+

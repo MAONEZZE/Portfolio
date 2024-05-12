@@ -1,32 +1,44 @@
-import { Component, Input } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { NgbCarousel, NgbCarouselModule, NgbSlideEvent, NgbSlideEventSource } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-carrossel',
+  standalone: true,
+  imports: [NgbCarouselModule],
   templateUrl: './carrossel.component.html',
-  styleUrls: ['./carrossel.component.scss']
+  styleUrl: './carrossel.component.scss'
 })
 export class CarrosselComponent {
-  @Input() img: String = '';
+  images = [62, 83, 466, 965, 982, 1043, 738].map((n) => `https://picsum.photos/id/${n}/900/500`);
 
-  currentIndex = 0;
-  slides = document.querySelectorAll('.carousel-slide') as NodeListOf<HTMLDivElement>;
-  container = document.querySelector('.carousel-container') as HTMLDivElement;
-  totalSlides = this.slides.length;
+	paused = false;
+	unpauseOnArrow = false;
+	pauseOnIndicator = false;
+	pauseOnHover = true;
+	pauseOnFocus = true;
 
-  goToSlide(index: number) {
-    this.currentIndex = index;
-    const offset = -this.currentIndex * 100;
-    this.container.style.transform = `translateX(${offset}%)`;
-  }
+	@ViewChild('carousel', { static: true })
+  carousel: NgbCarousel = new NgbCarousel;
 
-  nextSlide() {
-    this.currentIndex = (this.currentIndex + 1) % this.totalSlides;
-    this.goToSlide(this.currentIndex);
-  }
+	togglePaused() {
+		if (this.paused) {
+			this.carousel.cycle();
+		} else {
+			this.carousel.pause();
+		}
+		this.paused = !this.paused;
+	}
 
-  prevSlide(){
-    this.currentIndex = (this.currentIndex - 1 + this.totalSlides) % this.totalSlides;
-    this.goToSlide(this.currentIndex);
-  }
+	onSlide(slideEvent: NgbSlideEvent) {
+		if (
+			this.unpauseOnArrow &&
+			slideEvent.paused &&
+			(slideEvent.source === NgbSlideEventSource.ARROW_LEFT || slideEvent.source === NgbSlideEventSource.ARROW_RIGHT)
+		) {
+			this.togglePaused();
+		}
+		if (this.pauseOnIndicator && !slideEvent.paused && slideEvent.source === NgbSlideEventSource.INDICATOR) {
+			this.togglePaused();
+		}
+	}
 }
-

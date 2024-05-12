@@ -1,21 +1,32 @@
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav-content>
-    <mat-toolbar class="bg-black jcb espacamento-lateral">
-      <button 
-        appCardHover
-        mat-raised-button
-        style="border-radius: 100px;"
-        color="accent"
-        routerLink>
-        <mat-icon class="me-2">notes</mat-icon>
-        Curriculo
-      </button>
+    <mat-toolbar class="fundo-nav jcb espacamento-lateral">
+      <div class="col-md-6 col-sm-1 d-flex gap-3">
+        <button 
+          appCardHover
+          mat-mini-fab
+          routerLink="/home"
+          title="Página inicial">
+          <mat-icon class="">home</mat-icon>
+        </button>
 
-      <section class="jcb gap-2">
+        <button 
+          appCardHover
+          mat-raised-button
+          style="border-radius: 100px; height: 40px;"
+          color="accent"
+          routerLink="/curriculo"
+          title="Curriculo">
+          <mat-icon class="me-2">notes</mat-icon>
+          Curriculo
+        </button>
+      </div>
+
+      <div class="col-md-1 col-sm-1 jcb">
         <label class="mt-1" for="switch">PT</label>
 
         <div>
-          <label class="jcb">
+          <label class="jcb p-1" title="Mudar idioma">
 
             <input class="input-switch" type="checkbox" id="switch">
             <div class="slider">
@@ -26,12 +37,12 @@
         </div>
 
         <label class="mt-1" for="switch">EN</label>
-      </section>
+      </div>
       
     </mat-toolbar>
     
     <main>
-      <ng-content ></ng-content>
+      <ng-content></ng-content>
     </main>
   </mat-sidenav-content>
 </mat-sidenav-container>
