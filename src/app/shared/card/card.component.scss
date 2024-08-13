@@ -1,0 +1,49 @@
+$cor1: #1b2211;
+$cor2: #233706;
+$cor3: #303030;
+
+.card-formatado{
+  border-radius: 10px;
+  border: 2px solid $cor3;
+}
+
+.linha{
+  display: flex;
+  justify-content: center;
+
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+.appCarrossel{
+  @media (max-width: 768px) { 
+    width: 100%;
+  }
+}
+
+.nome-projeto{
+  font-weight: bold;
+  color: $cor2;
+}
+
+.div-btn-site{
+  display: flex;
+  justify-content: end;
+  padding-top: 2%;
+}
+
+.btn-site{
+  border-radius: 5px;
+
+  @media (max-width: 768px) {
+    width: 100%; /* Botões ocupam toda a largura em telas menores */
+    text-align: center;
+  }
+}
+
+.descricao{
+  border: 1px solid $cor3;
+  border-radius: 10px;
+
+  font-weight: bold;
+}

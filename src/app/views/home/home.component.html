@@ -42,10 +42,46 @@
   <div class="borda-transicao"></div>
 
   <section class="fundo2 p-3">
-    <div class="container">
-      <div class="row-md-6 mt-4 row-sm-12">
-        carrossel
-      </div>
+    <div class="container mb-3">
+      @for(obj of arrayProjetos; track obj){
+        <div class="row-md-6 mt-4 row-sm-12">
+          <app-card
+          class="appCarrossel"
+          [projeto]="obj"></app-card>
+        </div>
+      }
     </div>     
   </section>
+
+  <div class="borda-transicao"></div>
+
+  <section class="fundo1 p-3">
+    <div class="container mt-3">
+      <h5 class="sobre text-light">Sobre mim</h5>
+        <div class="row">
+            <div class="col-12 col-md-8">
+              <mat-card class="card-sobreMim p-3">
+                <p class="sobreMim">
+                  Eu tenho 21 anos e estou atualmente cursando Ciência da Computação no IFSC. 
+                  Apesar de ter pouco tempo na área, tenho muita vontade de continuar aprimorando 
+                  minhas habilidades em resolver problemas e programar.<br><br>
+                  Minha trajetória na tecnologia começou em 2022 no IFSC com <span class="text-danger">Java</span>. A partir daí, 
+                  gostei muito de programar e vi a variedade de áreas no mundo de desenvolvedor, 
+                  por conta disso comecei a querer fazer um curso para aprimorar minhas habilidades.<br><br>
+                  Contudo, no começo de 2023 conheci a Academia do Programador, na qual ganhei uma bolsa de estudos e aprendi a usar 
+                  diversas tecnologias, como <span class="text-primary">C#</span>, <span class="text-primary">.NET Core</span>, <span class="text-primary">Entity Framework Core</span>, <span style="color: rgb(102, 102, 247);">Docker</span> e práticas como 
+                  <span class="text-success">TDD</span> e <span class="text-success">DDD</span> no Backend e <span class="text-warning">HTML</span>, <span class="text-info">CSS</span>,  <span class="text-warning">Javascript</span>, <span class="text-info">Typescript</span>, <span class="text-danger">Angular</span> e <span class="text-primary">Bootstrap</span>, no 
+                  Frontend e para a automação de testes, foi utilizado MSTest e Cypress. No gerenciamento 
+                  de banco de dados, utilizo Postgres e SQL Server e ferramentas como Pgadmin e SSMS e 
+                  Git/GitHub para o controle de versão.<br><br>
+                  Por fim em 2024, tive a oportunidade de ingressar na NDD como desenvolvedor no setor de qualidade. Desde então, venho aplicando minhas habilidades
+                </p>
+              </mat-card>
+            </div>
+            <div class="col-12 col-md-4 d-flex justify-content-md-end">
+              <img class="retrato img-fluid" src="../../../assets/FotosEu/eu_foto2Ajustada.jpeg" alt="Minha foto">
+            </div>
+        </div>
+    </div>
 </section>
+

@@ -1,0 +1,11 @@
+.img-formatada{
+  width: 100%;
+  border-radius: 10px;
+  border: 3px solid rgb(18, 44, 15);
+}
+
+.carrossel-formatado{
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}

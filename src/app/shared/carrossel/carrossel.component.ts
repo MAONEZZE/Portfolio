@@ -1,5 +1,6 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, Input, ViewChild } from '@angular/core';
 import { NgbCarousel, NgbCarouselModule, NgbSlideEvent, NgbSlideEventSource } from '@ng-bootstrap/ng-bootstrap';
+import Projeto from '../../model/projeto-model';
 
 @Component({
   selector: 'app-carrossel',
@@ -9,7 +10,7 @@ import { NgbCarousel, NgbCarouselModule, NgbSlideEvent, NgbSlideEventSource } fr
   styleUrl: './carrossel.component.scss'
 })
 export class CarrosselComponent {
-  images = [62, 83, 466, 965, 982, 1043, 738].map((n) => `https://picsum.photos/id/${n}/900/500`);
+	@Input() projeto: Projeto = new Projeto([], '', '', '', '');
 
 	paused = false;
 	unpauseOnArrow = false;

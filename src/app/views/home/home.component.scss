@@ -44,6 +44,21 @@ p{
   font-family: 'Rubik Mono One', monospace;
 }
 
+.sobre{
+  font-size: 3vw;
+
+  @media screen and (max-width: 900px) {
+    font-size: 10vw; 
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  line-height: 0.7;
+  font-family: 'Rubik Mono One', monospace;
+}
+
 .descricao{
   text-align: center;
   margin: 0 auto;
@@ -70,9 +85,48 @@ p{
   background: linear-gradient(16deg, rgba(232,0,0,0.4822303921568627) 0%, rgba(255,255,255,1) 52%, rgba(255,98,0,0.48783263305322133) 100%);
 }
 
-// *{
-//   border: 1px solid red;
-// }
+.retrato{
+  width: 100%;
+  height: auto;
+
+  border: 2px solid $cor2;
+  border-radius: 10px;
+}
+
+.cabecalho-card{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  border-bottom: 1px solid $cor3;
+}
+
+.sobreMim{
+  padding: 25px;
+  text-align: justify;
+  display: block; 
+
+  font-weight: 500;
+  font-size: large;
+  line-height: 1.4;
+}
+
+.titulo-cabecalho{
+  font-weight: bold;
+}
+
+.alinhamento{
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-sobreMim{
+  width: auto;
+  height: 100%;
+
+  border-radius: 10px;
+  border: 2px solid $cor2;
+}
 
 .borda-transicao{
   border: 3px solid $cor3;

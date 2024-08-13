@@ -1,22 +1,17 @@
 <ngb-carousel
 	#carousel
-	[interval]="1000"
+	[interval]="5000"
 	[pauseOnHover]="pauseOnHover"
 	[pauseOnFocus]="pauseOnFocus"
-	(slide)="onSlide($event)">
+	(slide)="onSlide($event)"
+	class="carrossel-formatado">
 
-	@for (img of images; track img; let i = $index) {
+	@for (img of projeto.fotos; track img) {
 		<ng-template ngbSlide>
-			<div class="carousel-caption">
-				<h3>My slide {{ i + 1 }} title</h3>
+			<div class="picsum-img-wrapper">
+				<img [src]="'../../../assets/Projetos/' + img" class="img-formatada"/>
 			</div>
-			<a href="" target="_blank" >
-				<div class="picsum-img-wrapper">
-					<img [src]="img" alt="My image {{ i + 1 }} description" />
-				</div>
-			</a>
 		</ng-template>
 	}
 </ngb-carousel>
 
-<hr />

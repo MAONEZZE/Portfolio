@@ -1,0 +1,24 @@
+{
+  "SobreMim":"Olá para você que está lendo sobre mim.\nEu tenho 21 anos e estou atualmente cursando Ciência da Computação no IFSC. Apesar de ter pouco tempo na área, tenho muita vontade de continuar aprimorando minhas habilidades em resolver problemas e programar.\nMinha trajetória na tecnologia começou em 2022 no IFSC  com Java. A partir daí gostei muito de programar e vi a variedade de áreas no mundo de desenvolvedor, por conta disso comecei a querer fazer um curso para aprimorar minhas habilidades.\nContudo, no começo de 2023 conheci a Academia do Programador, na qual aprendi a usar diversas tecnologias, como C#, .NET Core, Entity Framework Core, Docker e práticas como TDD e DDD no Backend e HTML5, CSS3,  Javascript, Typescript, Angular e Bootstrap, no Frontend e para a automação de testes, foi  utilizado MSTest e Cypress. No gerenciamento de banco de dados, utilizo  Postgres e SQL Server e ferramentas como  Pgadmin e SSMS  e Git/GitHub para o controle de versão.",
+  "APMDB":{
+    "fotos": ["APMDB_FilmeSelec.png", "Filme_pesquisado.png", "filmes_popular.png"],
+    "nome": "APMDB",
+    "linkGithub": "https://github.com/MAONEZZE/Gerenciador_Filmes_Angular",
+    "linkWeb": "https://gerenciador-cinema.onrender.com/home",
+    "descricao": "Software que permite a você explorar uma vasta coleção de filmes, com funcionalidades para procurar títulos, ver filmes em cartaz e populares, além de favoritar seus preferidos. Assista trailers e obtenha todas as informações detalhadas sobre os filmes. Desenvolvido com Angular, TypeScript, Bootstrap e Angular Material. Navegue facilmente e descubra novos filmes para assistir e curtir!"
+  },
+  "eAgenda":{
+    "fotos": ["pagina_login_AgendaMedica.png", "AgendaMedica_dashboard.png", "listar_medico.png"],
+    "nome": "e-Agenda Médica",
+    "linkGithub": "https://github.com/MAONEZZE/Frontend_e-Agenda-Medica",
+    "linkWeb": "https://e-agenda-medica-page.onrender.com/login",
+    "descricao": "Software que ajuda na administração de consultas, cirurgias, pacientes e medicos, assim proporcionando um gerenciamento simplificado de consultas e cirurgias, permitindo o agendamento, visualização e edição de informações com praticidade. O software também facilita na administração de informações sobre os médicos e pacientes. Essa aplicação foi desenvolvida com Angular no frontend e C#(ASPNET) no backend."  
+  },
+  "eCommerce":{
+    "fotos": ["swagger.png", "e-commerce_home.png", "e-commerce_itemPesquisado.png", "e-commerce_itemSelecionado.png"],
+    "nome": "The Shape Skateshop",
+    "linkGithub": "https://github.com/The-Shape-Skateshop",
+    "linkWeb": "https://theshapesk8.netlify.app/",
+    "descricao": "Software desenvolvido em dupla, o qual é um site de e-commerce de roupa e peças de skate. Nesse projeto fui encarregado de desenvolver o backend com C#(ASPNET), Postgres, EF Core, Docker e com deploy na plataforma do render. Esse site permite que você faça compras, veja produtos, pesquise por eles, monte seu carrinho e se cadastre"
+  }
+}

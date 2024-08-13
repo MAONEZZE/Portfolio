@@ -1,1 +1,32 @@
-<p>card works!</p>
+<mat-card class="bg-light card-formatado">
+  <div class="row linha mb-4">
+    <div class="col-12 col-md-6 mt-4">
+      <app-carrossel
+        [projeto]="projeto"></app-carrossel>
+    </div>
+    <div class="col-12 col-md-6">
+      <div class="d-flex justify-content-center mt-3">
+        <h1 class="nome-projeto">{{projeto.nome}}</h1>
+      </div>
+      <div class="descricao">
+        <p class="p-2">{{projeto.descricao}}</p>
+      </div>
+
+      <div class="d-flex flex-column flex-md-row justify-content-between mt-2">
+        <div class="mb-2 mb-md-0">
+          <a mat-raised-button class="btn-site" color="primary" [href]="projeto.linkGithub">
+            <i class="bi bi-github"></i>
+            Acesso ao Github
+          </a>
+        </div>
+  
+        <div>
+          <a mat-raised-button class="btn-site" color="primary" [href]="projeto.linkWeb">
+            <i class="bi bi-globe2"></i>
+            Acesso ao Site
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</mat-card>
