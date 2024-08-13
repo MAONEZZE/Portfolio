@@ -44,21 +44,6 @@ p{
   font-family: 'Rubik Mono One', monospace;
 }
 
-.sobre{
-  font-size: 3vw;
-
-  @media screen and (max-width: 900px) {
-    font-size: 10vw; 
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  line-height: 0.7;
-  font-family: 'Rubik Mono One', monospace;
-}
-
 .descricao{
   text-align: center;
   margin: 0 auto;
@@ -85,30 +70,12 @@ p{
   background: linear-gradient(16deg, rgba(232,0,0,0.4822303921568627) 0%, rgba(255,255,255,1) 52%, rgba(255,98,0,0.48783263305322133) 100%);
 }
 
-.retrato{
-  width: 100%;
-  height: auto;
-
-  border: 2px solid $cor2;
-  border-radius: 10px;
-}
-
 .cabecalho-card{
   align-items: center;
   display: flex;
   justify-content: center;
 
   border-bottom: 1px solid $cor3;
-}
-
-.sobreMim{
-  padding: 25px;
-  text-align: justify;
-  display: block; 
-
-  font-weight: 500;
-  font-size: large;
-  line-height: 1.4;
 }
 
 .titulo-cabecalho{
@@ -121,11 +88,50 @@ p{
 }
 
 .card-sobreMim{
-  width: auto;
+  width: 100%;
   height: 100%;
 
   border-radius: 10px;
   border: 2px solid $cor2;
+}
+
+.sobreMim{
+  width: 100%;
+  height: auto;
+
+  padding: 25px;
+  text-align: center;
+
+  font-weight: 500;
+  font-size: large;
+  line-height: 1.4;
+}
+
+.sobre{
+  font-size: 3vw;
+
+  @media screen and (max-width: 900px) {
+    font-size: 9vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  line-height: 0.7;
+  font-family: 'Rubik Mono One', monospace;
+  color: #1b2211;
+}
+
+.retrato{
+  width: 100%;
+  height: auto;
+
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
+
+  border: 2px solid $cor2;
+  border-radius: 10px;
 }
 
 .borda-transicao{
