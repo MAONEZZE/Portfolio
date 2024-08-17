@@ -43,8 +43,12 @@
 
   <section class="fundo2 p-3">
     <div class="container mb-3">
+      <h1 class="d-flex justify-content-center sobre mt-2">Projetos</h1>
+      <div class="d-flex justify-content-center">
+        <div class="separador-sem-padding w-50 mb-2"></div>
+      </div>
       @for(obj of arrayProjetos; track obj){
-        <div class="row-md-6 mt-4 row-sm-12">
+        <div class="row-md-6 mt-3 row-sm-12">
           <app-card
           class="appCarrossel"
           [projeto]="obj"></app-card>
@@ -63,6 +67,9 @@
                 <mat-card-header class="d-flex justify-content-center"> 
                   <span class="sobre">Sobre mim</span>
                 </mat-card-header>
+                <div class="d-flex justify-content-center">
+                  <div class="separador-sem-padding w-75 mt-3"></div>
+                </div>
                 <p class="sobreMim">
                   Eu tenho 21 anos e estou atualmente cursando Ciência da Computação no IFSC. 
                   Apesar de ter pouco tempo na área, tenho muita vontade de continuar aprimorando 
@@ -73,8 +80,8 @@
                   Contudo, no começo de 2023 conheci a Academia do Programador, na qual ganhei uma bolsa de estudos e aprendi a usar 
                   diversas tecnologias, como <span class="text-primary">C#</span>, <span class="text-primary">.NET Core</span>, <span class="text-primary">Entity Framework Core</span>, <span style="color: rgb(102, 102, 247);">Docker</span> e práticas como 
                   <span class="text-success">TDD</span> e <span class="text-success">DDD</span> no Backend e <span class="text-warning">HTML</span>, <span class="text-info">CSS</span>,  <span class="text-warning">Javascript</span>, <span class="text-info">Typescript</span>, <span class="text-danger">Angular</span> e <span class="text-primary">Bootstrap</span>, no 
-                  Frontend e para a automação de testes, foi utilizado MSTest e Cypress. No gerenciamento 
-                  de banco de dados, utilizo Postgres e SQL Server e ferramentas como Pgadmin e SSMS e 
+                  Frontend e para a automação de testes, foi utilizado <span class="text-success">MSTest</span> e <span style="color: rgb(0, 184, 107);">Cypress</span>. No gerenciamento 
+                  de banco de dados, utilizo <span style="color: rgb(102, 102, 247);">Postgres</span> e SQL Server e ferramentas como Pgadmin e SSMS e 
                   Git/GitHub para o controle de versão.
                 </p>
               </mat-card>
